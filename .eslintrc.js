@@ -5,6 +5,7 @@ module.exports = {
     "es6": true
   },
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -96,13 +97,12 @@ module.exports = {
     "guard-for-in": "error",
     "handle-callback-err": "error",
     "id-blacklist": "error",
-    "id-length": "error",
     "id-match": "error",
     "indent": "off",
     "init-declarations": "off",
     "jsx-quotes": [
       "error",
-      "prefer-double"
+      "prefer-single"
     ],
     "key-spacing": "error",
     "keyword-spacing": [
@@ -160,7 +160,7 @@ module.exports = {
       "error",
       "functions"
     ],
-    "no-invalid-this": "error",
+    "no-invalid-this": "off",
     "no-iterator": "error",
     "no-label-var": "error",
     "no-labels": "error",
@@ -168,7 +168,6 @@ module.exports = {
     "no-lonely-if": "error",
     "no-loop-func": "error",
     "no-magic-numbers": "off",
-    "no-mixed-operators": "error",
     "no-mixed-requires": "error",
     "no-multi-assign": "error",
     "no-multi-spaces": "off",
@@ -191,7 +190,6 @@ module.exports = {
       }
     ],
     "no-path-concat": "error",
-    "no-plusplus": "error",
     "no-process-env": "off",
     "no-process-exit": "off",
     "no-proto": "error",

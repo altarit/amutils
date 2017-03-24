@@ -1,0 +1,12 @@
+.Luhn-size {
+  max-width: 100px;
+}
+
+.Luhn-field {
+  max-width: 300px;
+}
+
+.Luhn-form {
+  display: inline-block;
+  margin-right: 10px;
+}

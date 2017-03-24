@@ -10,7 +10,7 @@ insert_final_newline = true
 charset = utf-8
 
 # Indentation override for all JS
-[*.{js,json,css}]
+[*.{js,json,css,svg}]
 indent_style = space
 indent_size = 2
 

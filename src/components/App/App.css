@@ -1,10 +1,12 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  margin: 5px 0 0 0;
 }
 
 .App-header {
@@ -16,6 +18,11 @@
 
 .App-intro {
   font-size: large;
+}
+
+.App-tab {
+  display: inline-block;
+  font-size: 16pt;
 }
 
 @keyframes App-logo-spin {
