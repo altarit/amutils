@@ -46,7 +46,8 @@ export function generateImsi(max = 1, first, additionalSeq = 0) {
     startSeq = 0;
   } else {
     constPart = first.substr(0, 7);
-    let temps = first.substr(7, 7);
+    // constPart = '74000' + first.substr(5, 2);
+    let temps = first.substr(7, 8);
     while (temps.length < 8) {
       temps += '0';
     }
@@ -67,6 +68,7 @@ export function generateIccid(max = 1, first, additionalSeq = 0) {
     startSeq = 0;
   } else {
     constPart = first.substr(0, 11);
+    // constPart = '8959300' + first.substr(7, 4);
     let temps = first.substr(11, 7);
     while (temps.length < 7) {
       temps += '0';

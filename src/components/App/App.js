@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     console.log('App.render');
     return (
-      <div className='container-fluid'>
+      <div className='container'>
         <nav className='navbar navbar-default'>
           <div className='container-fluid'>
             <div className='navbar-header'>
@@ -42,3 +42,4 @@ class App extends Component {
 }
 
 export default App;
+
