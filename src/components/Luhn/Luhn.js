@@ -1,4 +1,5 @@
 import React from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import {generateIccid, generateImei} from '../../model/generatorUtils'
 import './Luhn.css';
 
@@ -6,19 +7,22 @@ class Luhn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      size: 1
+      size: 1,
+      number: ' '
     };
   }
 
   fillIccid = () => {
     this.setState({
-      number: generateIccid(this.state.size, this.state.first)
+      number: generateIccid(this.state.size, this.state.first),
+      copied: false
     })
   }
 
   fillImei = () => {
     this.setState({
-      number: generateImei(this.state.size, this.state.first)
+      number: generateImei(this.state.size, this.state.first),
+      copied: false
     })
   }
 
@@ -49,7 +53,12 @@ class Luhn extends React.Component {
           <button className='btn btn-primary Luhn-form' onClick={this.fillImei}>Generate Imei</button>
         </div>
         <div>
-          <h3>Result:</h3>
+          <h3 className='Luhn-form'>Result:</h3>
+          <CopyToClipboard text={this.state.number}
+                           onCopy={() => this.setState({copied: true})}>
+            <button className='btn btn-primary btn-xs Luhn-form'>Copy</button>
+          </CopyToClipboard>
+          {this.state.copied ? <span style={{color: 'green'}}>Copied</span> : null}
           <pre><p>{this.state.number}</p></pre>
 
         </div>

@@ -6,7 +6,7 @@ class Home extends React.Component {
     return (
       <div className='Home-container'>
         <h1>AM Utils</h1>
-        Couple of tools to generate Iccid/Imei numbers. Some more features might be added in the future.
+        Couple of tools for generation Iccid/Imei numbers. Some more features might be added in the future.
         If you have questions and suggestions feel free to create an issue
         on <a href='https://github.com/altarit/amutils'>GitHub</a> or fork the repository.
         <br/><br/>
